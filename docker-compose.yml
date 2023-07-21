@@ -26,7 +26,7 @@ services:
         --auto-provision \
         --auto-accept-invites \
         --auto-accept-requests \
-        --genesis-url 'http://103.52.192.245:7000/genesis' \
+        --genesis-url 'http://10.123.10.108:7000/genesis' \
         --auto-ping-connection \
         --tails-server-base-url 'https://e8bb-210-195-159-76.ngrok.io/' ",
       ]
