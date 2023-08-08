@@ -38,7 +38,7 @@ export class CredentialRequestCardComponent implements OnInit {
   AVAIL_SUFFIX: string = "_available";
   employeeName: string;
   employeeIC: string;
-  employeeState: string = "false";
+  employeeState: string = "invalid";
   testSaino: string;
 
   constructor(private agentService: AgentService, private sainoService: SainoService) { }
@@ -50,7 +50,12 @@ export class CredentialRequestCardComponent implements OnInit {
         if(data.success == true){
           this.employeeName = this.credentialRequest.cred_ex_record.by_format.cred_proposal.ld_proof.credential.credentialSubject.name;
           this.employeeIC = this.credentialRequest.cred_ex_record.by_format.cred_proposal.ld_proof.credential.credentialSubject.ic;
-          this.employeeState = "true";
+          this.employeeState = "valid";
+        }
+        else{
+          this.employeeName = this.credentialRequest.cred_ex_record.by_format.cred_proposal.ld_proof.credential.credentialSubject.name;
+          this.employeeIC = this.credentialRequest.cred_ex_record.by_format.cred_proposal.ld_proof.credential.credentialSubject.ic;
+          this.employeeState = "valid";
         }
       })
     )
