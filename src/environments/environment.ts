@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  ip: "10.123.10.106",
+  ip: "localhost",
   issuerPort: "4000",
   holderPort: "7011",
   verifierPort: "6001",
